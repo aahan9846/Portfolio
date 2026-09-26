@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio — Full-Stack Developer</title>
+<meta name="description" content="Personal portfolio showcasing full-stack projects, skills, and contact details." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="topbar">
+  <span class="mark">/portfolio</span>
+  <nav class="topnav">
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <p class="coord">N 13.0827° · E 80.2707°</p>
+    <h1>I build things that<br>run front to back.</h1>
+    <p class="hero-sub">
+      Full-stack developer. I design the interface, wire the server, and
+      shape the database underneath — then ship the whole thing.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">See the work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <span class="section-note">pulled live from <code>/api/projects</code></span>
+    </div>
+    <div id="project-list" class="project-list">
+      <p class="loading">Loading projects…</p>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="section-head">
+      <h2>Stack</h2>
+      <span class="section-note">what I reach for, by layer</span>
+    </div>
+    <div id="skills-grid" class="skills-grid">
+      <p class="loading">Loading skills…</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div>
+        <h2>About</h2>
+        <p>
+          I'm a full-stack developer who likes owning a feature end to end —
+          from the pixel on screen to the row in the database. This site
+          itself is a working example: a static frontend, an Express API,
+          and a SQLite database, deployed as one small, honest app.
+        </p>
+        <p>
+          Comfortable across the stack: HTML/CSS/JS or React on the
+          frontend, Node.js/Express or Python/Flask on the backend, and
+          SQL or document databases underneath — with deploys to Render,
+          Vercel, or Netlify.
+        </p>
+      </div>
+      <ul class="facts">
+        <li><span>Frontend</span>HTML, CSS, JavaScript, React</li>
+        <li><span>Backend</span>Node.js / Express, Flask</li>
+        <li><span>Database</span>PostgreSQL, MongoDB, SQLite</li>
+        <li><span>Deploy</span>Render, Vercel, Netlify</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <span class="section-note">goes straight to the database</span>
+    </div>
+    <form id="contact-form" class="contact-form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>Built with HTML, CSS, JS, Express &amp; SQLite.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
